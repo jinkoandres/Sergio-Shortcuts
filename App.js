@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
+import Header from './src/Components/Header.js';
 
 export default class App extends React.Component {
   state = {
@@ -13,8 +14,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.root}>
-        <View style={styles.statusbar}>
-        </View>
+        <Header title='Shortcuts' />
         <View style={styles.contenedor}>
           <Text style={styles.elemento1}>{this.state.inputValue}</Text>
           <Text style={styles.elemento1}>hola</Text>
@@ -44,13 +44,6 @@ const styles = StyleSheet.create({
     borderWidth:0,
     borderColor:'red',
     flexDirection:'column',
-  },
-  statusbar: {
-    height:22,
-    borderWidth:0,
-    borderColor:'red',
-    flexDirection:'column',
-    backgroundColor:'#aaaaaa'
   },
   contenedor: {
     flex:1,
