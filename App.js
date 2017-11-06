@@ -1,17 +1,37 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default class App extends React.Component {
+  state = {
+    inputValue: "You can change me!"
+  };
+
+  _handleTextChange = inputValue => {
+    this.setState({ inputValue });
+  };
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Texto 1</Text>
-        <Text>Texto 2</Text>
-        <Text>Texto 3</Text>
-        <View style={styles.container2}>
-          <Text style={styles.txt}>Texto 1</Text>
-          <Text>Texto 2</Text>
-          <Text>Texto 3</Text>
+      <View style={styles.root}>
+        <View style={styles.statusbar}>
+        </View>
+        <View style={styles.contenedor}>
+          <Text style={styles.elemento1}>{this.state.inputValue}</Text>
+          <Text style={styles.elemento1}>hola</Text>
+          <Text style={styles.elemento1}>hola</Text>
+          <Text style={styles.elemento1}>hola</Text>
+          <Text style={styles.elemento1}>hola</Text>
+          <Text style={styles.elemento1}>hola</Text>
+          <Text style={styles.elemento1}>hola</Text>
+          <Text style={styles.elemento1}>hola</Text>
+          <Text style={styles.elemento1}>hola</Text>
+          <Text style={styles.elemento1}>hola</Text>
+          <TextInput
+            value='hola'
+            onChangeText={this._handleTextChange}
+            style={styles.elemento1}
+          />
+        
         </View>
       </View>
     );
@@ -19,23 +39,32 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 0.5,
-    backgroundColor: '#0f0',
-    alignItems: 'center',
-    justifyContent: 'center',
+  root: {
+    flex:1,
+    borderWidth:0,
+    borderColor:'red',
+    flexDirection:'column',
   },
-  container2: {
-    flex: 0.5,
-    backgroundColor: '#0ff',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    flexDirection: 'row-reverse',
+  statusbar: {
+    height:22,
+    borderWidth:0,
+    borderColor:'red',
+    flexDirection:'column',
+    backgroundColor:'#aaaaaa'
   },
-  txt: {
-    flex: 0.2,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    flexDirection: 'row-reverse',
+  contenedor: {
+    flex:1,
+    borderWidth:0,
+    borderColor:'red',
+    flexDirection:'column',
+    justifyContent:'space-around'
+    
   },
+  elemento1:{
+    height:44,
+    borderWidth:1,
+    borderColor:'blue',
+    paddingTop:10,
+    paddingLeft:5,
+  }
 });
