@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView} from 'react-native';
 import Header from './src/Components/Header.js';
 
 export default class App extends React.Component {
@@ -15,24 +15,24 @@ export default class App extends React.Component {
     return (
       <View style={styles.root}>
         <Header title='Shortcuts' />
-        <View style={styles.contenedor}>
-          <Text style={styles.elemento1}>{this.state.inputValue}</Text>
-          <Text style={styles.elemento1}>hola</Text>
-          <Text style={styles.elemento1}>hola</Text>
-          <Text style={styles.elemento1}>hola</Text>
-          <Text style={styles.elemento1}>hola</Text>
-          <Text style={styles.elemento1}>hola</Text>
-          <Text style={styles.elemento1}>hola</Text>
-          <Text style={styles.elemento1}>hola</Text>
-          <Text style={styles.elemento1}>hola</Text>
-          <Text style={styles.elemento1}>hola</Text>
+        <ScrollView >
+          <Text style={styles.elemento}>{this.state.inputValue}</Text>
+          <Text style={styles.elemento}>hola</Text>
+          <Text style={styles.elemento}>hola</Text>
+          <Text style={styles.elemento}>hola</Text>
+          <Text style={styles.elemento}>hola</Text>
+          <Text style={styles.elemento}>hola</Text>
+          <Text style={styles.elemento}>hola</Text>
+          <Text style={styles.elemento}>hola</Text>
+          <Text style={styles.elemento}>hola</Text>
+          <Text style={styles.elemento}>hola</Text>
           <TextInput
             value='hola'
             onChangeText={this._handleTextChange}
-            style={styles.elemento1}
+            style={styles.elemento}
           />
         
-        </View>
+        </ScrollView>
       </View>
     );
   }
@@ -50,10 +50,9 @@ const styles = StyleSheet.create({
     borderWidth:0,
     borderColor:'red',
     flexDirection:'column',
-    justifyContent:'space-around'
     
   },
-  elemento1:{
+  elemento:{
     height:44,
     borderWidth:1,
     borderColor:'blue',
