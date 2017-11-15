@@ -7,9 +7,9 @@ import {
 
 export default class Header extends React.Component {
     render() {
-        return ( 
-            <View style = {styles.statusbar} >
-            <Text> {this.props.title} </Text>
+        return (
+            <View style={styles.statusbar} >
+                <Text> {this.props.title} </Text>
             </View>
         );
     }
