@@ -3,6 +3,7 @@ import { StyleSheet, View, ScrollView} from 'react-native';
 import Header from './src/Components/Header.js';
 import Item from './src/Components/Item.js';
 import UserTextInput from './src/Components/UserInput.js';
+import ShortcutList from './src/Components/ShortcutList.js';
 
 export default class App extends React.Component {
   render() {
@@ -11,16 +12,7 @@ export default class App extends React.Component {
         <Header title='Shortcuts' />
         <ScrollView >
           <UserTextInput startvalue="hola"/>
-          <Item title="holaa"></Item>
-          <Item title="hola"> </Item>
-          <Item title="sergio"></Item>
-          <Item title="como"> </Item>
-          <Item title="estas"></Item>
-          <Item title="hola"></Item>
-          <Item title="hola"></Item>
-          <Item title="hola"></Item>
-          <Item title="hola"></Item>
-          <Item title="hola"></Item>
+          <ShortcutList ShortcutList = {['2', '3']}/>
         </ScrollView>
       </View>
     );

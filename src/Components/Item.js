@@ -6,10 +6,12 @@ import {
 } from 'react-native';
 
 export default class Item extends React.Component {
+    
     render() {
+        const {elemento } = styles;
         return (
             <View> 
-                <Text style={styles.elemento}>{this.props.title}</Text>
+                <Text style={elemento}>{this.props.title}</Text>
             </View>
         );
     }
