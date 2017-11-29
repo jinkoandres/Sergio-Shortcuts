@@ -15,6 +15,7 @@ export default class UserTextInput extends React.Component {
     };
 
     render() {
+        console.log('UserInput: React native llama el render');
         return (
             <View>
                 <TextInput

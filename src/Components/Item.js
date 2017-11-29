@@ -8,8 +8,9 @@ import {
 export default class Item extends React.Component {
     render() {
         return (
-            <View> 
-                <Text style={styles.elemento}>{this.props.title}</Text>
+            <View style={styles.elemento}> 
+                <Text >{this.props.title}</Text>
+                <Text style={styles.releaseYear}>{this.props.releaseYear}</Text>
             </View>
         );
     }
@@ -22,6 +23,12 @@ const styles = StyleSheet.create({
         borderColor:'blue',
         paddingTop:10,
         paddingLeft:5,
-      }
+        flexDirection:'row'
+
+      },
+    releaseYear:{
+        
+        alignSelf:'flex-end'
+    }
 })
 

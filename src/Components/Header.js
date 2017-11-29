@@ -6,7 +6,23 @@ import {
 } from 'react-native';
 
 export default class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log('Header: React native llama el constructor');
+    }
+    componentWillMount() {
+        console.log('Header: React native llama  componentWillmount');
+        
+    }
+    componentDidMount() {
+        console.log('Header: React native llama  componentDidMount');
+    }
+    componentWillReceiveProps(props) {
+        console.log('Header: React native llama  componentWillReceiveProps');
+    }
+    
     render() {
+        console.log('Header: React native llama el render');        
         return (
             <View style={styles.statusbar} >
                 <Text> {this.props.title} </Text>
