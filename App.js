@@ -11,7 +11,7 @@ export default class App extends React.Component {
     console.log('App: React native llama el render');
     return (
       <View style={styles.root}>
-        <Header title='Shortcuts' />
+        <Header titleText='Shortcuts' />
         <ScrollView >
           <UserTextInput startvalue="hola"/>
             <FlatList

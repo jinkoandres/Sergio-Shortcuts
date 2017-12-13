@@ -6,41 +6,39 @@ import {
 } from 'react-native';
 
 export default class Header extends React.Component {
-    constructor(props) {
-        super(props);
-        console.log('Header: React native llama el constructor');
-    }
-    componentWillMount() {
-        console.log('Header: React native llama  componentWillmount');
-        
-    }
-    componentDidMount() {
-        console.log('Header: React native llama  componentDidMount');
-    }
-    componentWillReceiveProps(props) {
-        console.log('Header: React native llama  componentWillReceiveProps');
-    }
-    
     render() {
-        console.log('Header: React native llama el render');        
+        const {background, title, statusDark} = styles;
+        const {titleText} = this.props;
         return (
-            <View style={styles.statusbar} >
-                <Text> {this.props.title} </Text>
+            <View>
+                <View style={statusDark}></View>
+                <View style={background} >
+                    <Text style = {title}> {titleText} </Text>
+                </View>
             </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    statusbar: {
-        height:60,
+    statusDark:{
+        height: 24,
+        backgroundColor:'#1976D2'
+    },
+    background: {
         paddingTop: 8,
-        borderWidth:0,
-        borderColor:'red',
-        flexDirection:'column',
-        backgroundColor:'#aaaaaa',
+        flexDirection: 'column',
+        backgroundColor: '#03A9F4',
         alignItems: 'center',
-        justifyContent : 'center'
-      }
+        justifyContent: 'center',
+        height : 80,
+        shadowColor:'#000',
+        shadowOffset : {width : 0, height :2},
+        shadowOpacity :0.4
+    },
+    title: {
+        fontSize:24,
+        color: '#FFFFFF'
+    }
 })
 
