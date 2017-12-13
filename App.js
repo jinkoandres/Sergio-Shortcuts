@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, ScrollView, FlatList, Text} from 'react-native';
 import Header from './src/Components/Header.js';
 import Item from './src/Components/Item.js';
-import UserTextInput from './src/Components/UserInput.js';
+import FloatingActionButton from './src/Components/FloatingActionButton.js';
 
 export default class App extends React.Component {
 
@@ -13,7 +13,7 @@ export default class App extends React.Component {
       <View style={styles.root}>
         <Header titleText='Shortcuts' />
         <ScrollView >
-          <UserTextInput startvalue="hola"/>
+          
             <FlatList
               data={[{
                 "title": "Wings",
@@ -45,6 +45,7 @@ export default class App extends React.Component {
               renderItem={({item}) => <Item title={item.title} releaseYear = {item.releaseYear}></Item>}
             />
         </ScrollView>
+        <FloatingActionButton/>
       </View>
     );
   }

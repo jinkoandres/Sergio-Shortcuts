@@ -19,6 +19,7 @@ export default class UserTextInput extends React.Component {
         return (
             <View>
                 <TextInput
+                    placeholder = 'Escriba para añadir un item'
                     value={this.inputValue}
                     onChangeText={this._handleTextChange}
                     style={styles.elemento}
@@ -31,7 +32,7 @@ export default class UserTextInput extends React.Component {
 const styles = StyleSheet.create({
     elemento:{
         height:48,
-        borderWidth:1,
+        borderBottomWidth:1,
         borderColor:'blue',
         paddingTop:10,
         paddingLeft:5,
