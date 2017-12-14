@@ -10,7 +10,7 @@ export default class Header extends React.Component {
         const {background, title, statusDark} = styles;
         const {titleText} = this.props;
         return (
-            <View>
+            <View style = {{borderColor: 'green', borderWidth: 2}}>
                 <View style={statusDark}></View>
                 <View style={background} >
                     <Text style = {title}> {titleText} </Text>

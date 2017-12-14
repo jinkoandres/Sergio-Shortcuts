@@ -2,6 +2,11 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 class FloatingActionButton extends React.Component {
+    constructor(props) {
+        super(props);
+        
+    }
+
     render() {
         const { buttonBackground, buttonText, container } = styles;
         return (
@@ -15,24 +20,31 @@ class FloatingActionButton extends React.Component {
 }
 
 const styles = StyleSheet.create ({
-    container : {
-        flex : 1,
-        width : 40,
-        height :40,
-        alignSelf: 'flex-end',
-        alignItems: 'flex-end',
-        backgroundColor : 'green'
+    container :  {
+        alignSelf : 'flex-end',
+        backgroundColor: "transparent"
     },
     buttonText: {
-        flex : 1,
-        color : '#FFFF'
+        width : 72 / 2,
+        height : 72 / 2,
+        
+        color : '#FFFF',
+        fontSize: 20, 
+        lineHeight : 20, 
+        borderWidth : 2,
+        borderColor : 'red',
+        textAlign : 'center',
+        textAlignVertical : 'center'
+        
     },
     buttonBackground : {
-        flex: 1,
-        width : 40,
-        height : 40,
+        alignSelf : 'flex-end',
+        margin : 8,
+        width : 72,
+        height : 72,
+        borderRadius : 72 / 2,
         justifyContent: 'center',
-        alignItems : 'stretch',
+        alignItems : 'center',
         backgroundColor: '#03A9F4'
     }
 });
