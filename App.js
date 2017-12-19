@@ -16,33 +16,21 @@ export default class App extends React.Component {
           <UserTextInput startvalue="hola"/>
             <FlatList
               data={[{
-                "title": "Wings",
+                "title": "Reactable",
                 "key": "tt0018578",
-                "releaseDate": "1927-05-19T05:00:00.000Z",
-                "releaseCountry": "USA",
-                "releaseYear": 1927,
-                "releaseMonth": 4,
-                "releaseDay": 19
+                "url": "http://reactable.com"
               },
               {
-                "title": "The Broadway Melody",
+                "title": "Google",
                 "key": "tt0019729",
-                "releaseDate": "1929-02-01T05:00:00.000Z",
-                "releaseCountry": "USA",
-                "releaseYear": 1929,
-                "releaseMonth": 1,
-                "releaseDay": 1
+                "url": "https://google.com"
               },
               {
-                "title": "All Quiet on the Western Front",
+                "title": "The wayback machine",
                 "key": "tt0020629",
-                "releaseDate": "1930-04-21T04:00:00.000Z",
-                "releaseCountry": "USA",
-                "releaseYear": 1930,
-                "releaseMonth": 3,
-                "releaseDay": 21
+                "url": "https://web.archive.org"
               }]}
-              renderItem={({item}) => <Item title={item.title} releaseYear = {item.releaseYear}></Item>}
+              renderItem={({item}) => <Item title={item.title} releaseYear = {item.url}></Item>}
             />
         </ScrollView>
       </View>
