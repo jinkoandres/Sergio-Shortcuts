@@ -1,14 +1,14 @@
 import React from 'react';
 import { StyleSheet, View, ScrollView, FlatList, Text} from 'react-native';
+
+import { FloatingAction } from 'react-native-floating-action';
+import { Navigation } from 'react-native-navigation';
+
 import Header from './src/Components/Header.js';
 import Item from './src/Components/Item.js';
 import FloatingActionButton from './src/Components/FloatingActionButton.js';
 
 export default class App extends React.Component {
-
-  state =  {
-    isActionButtonVisible : true
-  }
 
   _scrollViewOffset = 0;
 
@@ -37,7 +37,20 @@ export default class App extends React.Component {
               renderItem={({item}) => <Item title={item.title} releaseYear = {item.url}></Item>}
             />
         </ScrollView>
-        {this.state.isActionButtonVisible ? <FloatingActionButton /> : null}
+        <FloatingAction
+        overrideWithAction ={true}
+        actions = {[{
+          text: 'Location',
+          icon: require('./images/ic_add_white_24dp_1x.png'),
+          name: 'bt_room',
+          position: 3
+        }]} 
+        onPressItem={
+          (name) => {
+            console.log(`selected button: ${name}`);
+          }
+        }
+      />
       </View>
     );
   }
