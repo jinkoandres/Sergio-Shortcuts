@@ -27,12 +27,9 @@ const styles = StyleSheet.create ({
     buttonText: {
         width : 72 / 2,
         height : 72 / 2,
-        
         color : '#FFFF',
-        fontSize: 20, 
-        lineHeight : 20, 
-        borderWidth : 2,
-        borderColor : 'red',
+        fontSize: 30, 
+        lineHeight : 32, 
         textAlign : 'center',
         textAlignVertical : 'center'
         

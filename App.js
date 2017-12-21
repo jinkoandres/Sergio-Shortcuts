@@ -102,8 +102,6 @@ _onScroll = (event) => {
 const styles = StyleSheet.create({
   root: {
     flex:1,
-    borderWidth:2,
-    borderColor:'red',
     flexDirection:'column',
     backgroundColor: '#BDBDBD'
   }
